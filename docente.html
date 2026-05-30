@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Docente — ComputaKids</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav class="navbar" role="banner">
+    <div class="nav-logo">
+      <a href="index.html" class="nav-back" aria-label="Volver al inicio">← Inicio</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-size:14px;font-weight:600;color:var(--color-text);">Panel Docente</span>
+      <span class="badge badge-blue">📚 Docente</span>
+    </div>
+    <span class="nav-badge">EEP N° 80</span>
+  </nav>
+
+  <main class="panel-layout" role="main">
+
+    <div class="panel-hero">
+      <h1>Panel del Docente</h1>
+      <p>Seguimiento de alumnos, estrategias DUA y recursos pedagógicos para el ciclo lectivo 2027.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid" aria-label="Estadísticas generales">
+      <div class="stat-card">
+        <div class="stat-label">Alumnos activos</div>
+        <div class="stat-value" id="stat-total-alumnos">0</div>
+        <div class="stat-sub">registrados en la plataforma</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Actividades completadas</div>
+        <div class="stat-value" id="stat-actividades">0</div>
+        <div class="stat-sub">en todas las materias</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Promedio de aciertos</div>
+        <div class="stat-value" id="stat-promedio">—</div>
+        <div class="stat-sub">todos los niveles</div>
+      </div>
+    </div>
+
+    <!-- Tabla de progreso -->
+    <div class="section-title">Progreso por alumno</div>
+    <div id="tabla-container">
+      <p style="font-size:13px;color:var(--color-text-muted);padding:20px 0;">
+        Todavía no hay alumnos registrados. Los alumnos aparecen aquí cuando ingresan desde el panel de estudiantes.
+      </p>
+    </div>
+
+    <!-- Estrategias DUA -->
+    <div class="section-title">Estrategias DUA implementadas</div>
+    <div class="cards-grid">
+
+      <div class="info-card">
+        <h3><span class="card-icon">👁️</span> Representación múltiple</h3>
+        <div class="info-item">Alto contraste activable</div>
+        <div class="info-item">Tamaño de texto ajustable (4 niveles)</div>
+        <div class="info-item">Pictogramas de apoyo</div>
+        <div class="info-item">Anuncios para lectores de pantalla</div>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">🖐️</span> Acción y expresión</h3>
+        <div class="info-item">Navegación completa por teclado</div>
+        <div class="info-item">Tiempo extendido para respuestas</div>
+        <div class="info-item">Modo concentración</div>
+        <div class="info-item">Ayudas visuales activables</div>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">💡</span> Motivación y compromiso</h3>
+        <div class="info-item">Sistema de puntaje y progreso</div>
+        <div class="info-item">Refuerzo positivo frecuente</div>
+        <div class="info-item">Retroalimentación inmediata</div>
+        <div class="info-item">Bonus por completar actividades</div>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">👥</span> Perfiles de accesibilidad</h3>
+        <div class="info-item">Perfil TDA: más tiempo + concentración</div>
+        <div class="info-item">Perfil Autismo: sin sonidos + ayudas</div>
+        <div class="info-item">Perfil Down: texto grande + contraste</div>
+        <div class="info-item">Perfil Retraso madurativo</div>
+      </div>
+
+    </div>
+
+    <!-- Contenidos por materia -->
+    <div class="section-title">Actividades disponibles por materia y nivel</div>
+    <table class="data-table" aria-label="Tabla de contenidos por materia">
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>Explorar</th>
+          <th>Resolver</th>
+          <th>Crear</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Biología</strong></td>
+          <td>Clasificar animales (vertebrados / invertebrados)</td>
+          <td><span class="badge badge-gray">Próximamente</span></td>
+          <td><span class="badge badge-gray">Próximamente</span></td>
+        </tr>
+        <tr>
+          <td><strong>Matemática</strong></td>
+          <td>Completar series numéricas</td>
+          <td>Ecuaciones simples (3 + __ = 10)</td>
+          <td>Construir series propias</td>
+        </tr>
+        <tr>
+          <td><strong>Música</strong></td>
+          <td>Reconocer patrones rítmicos</td>
+          <td>Completar secuencias de notas</td>
+          <td>Componer melodía con bloques</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Marco teórico referencia -->
+    <div class="section-title">Marco pedagógico de referencia</div>
+    <div class="info-card" style="max-width:600px;">
+      <h3><span class="card-icon">📖</span> Fundamentos teóricos</h3>
+      <div class="info-item">Wing (2006): pensamiento computacional como competencia transversal</div>
+      <div class="info-item">UNESCO (2021): educación digital inclusiva y acceso equitativo</div>
+      <div class="info-item">Ortuño Meseguer & Serrano (2024): formación docente en PC</div>
+      <div class="info-item">DUA: múltiples medios de representación, acción y motivación</div>
+    </div>
+
+  </main>
+
+  <script src="js/docente.js"></script>
+
+</body>
+</html>

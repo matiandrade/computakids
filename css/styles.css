@@ -1,0 +1,457 @@
+:root {
+    --bg: #f0f0f0;
+    --text: #333;
+    --panel-bg: #ffffff;
+    --panel-border: #333333;
+    --button-bg: #4CAF50;
+    --button-text: #ffffff;
+    --button-hover: #45a049;
+    --selected-bg: #2196F3;
+    --selected-text: #ffffff;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+body.high-contrast .accessibility-panel,
+body.high-contrast #contenedor-nivel,
+body.high-contrast .botones-materias button,
+body.high-contrast .botones-niveles button,
+body.high-contrast .activity-controls button,
+body.high-contrast .panel-section button {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.focus-mode .intro-text {
+    display: none;
+}
+
+body.help-visible button {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.35);
+}
+
+body.show-pictograms .activity-title::before {
+    content: '💡 ';
+}
+
+.accessibility-panel {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 320px;
+    background-color: var(--panel-bg);
+    color: var(--text);
+    border: 2px solid var(--panel-border);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    z-index: 1000;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+}
+
+.accessibility-panel h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+}
+
+.panel-section {
+    margin-bottom: 14px;
+}
+
+.panel-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.panel-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.panel-buttons button {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    font-size: 0.95rem;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.panel-buttons button.active,
+.panel-buttons button:focus {
+    background-color: var(--selected-bg);
+    color: var(--selected-text);
+    border-color: var(--selected-bg);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 350px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Panel de Alumno */
+.alumno-panel {
+    background-color: #e3f2fd;
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alumno-input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.alumno-input-group label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.alumno-input-group input {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #2196F3;
+    border-radius: 6px;
+    width: 200px;
+    max-width: 100%;
+}
+
+.alumno-input-group input:focus {
+    outline: 3px solid #2196F3;
+    outline-offset: 2px;
+}
+
+#btn-guardar-alumno {
+    padding: 10px 24px;
+    font-size: 1rem;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn-guardar-alumno:hover {
+    background-color: #1976D2;
+}
+
+.alumno-display {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1976D2;
+}
+
+/* Panel de Estadísticas */
+.estadisticas-panel {
+    background-color: #f3e5f5;
+    border: 2px solid #9C27B0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #6A1B9A;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9C27B0;
+}
+
+#btn-reiniciar-progreso {
+    padding: 10px 24px;
+    font-size: 1rem;
+    background-color: #FF6F00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn-reiniciar-progreso:hover {
+    background-color: #E65100;
+}
+
+h1 {
+
+.botones-materias,
+.botones-niveles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+}
+
+.progress-wrapper {
+    width: 100%;
+}
+
+.progress-fill {
+    transition: width 0.5s ease;
+}
+
+button:focus {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
+button.seleccionado {
+    background-color: var(--selected-bg);
+    color: var(--selected-text);
+}
+
+#contenedor-nivel {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    min-height: 300px;
+    text-align: center;
+}
+
+.activity-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.activity-controls button {
+    min-width: 120px;
+}
+
+.secuencia-visual {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.secuencia-visual div {
+    width: 40px;
+    height: 40px;
+    border: 2px dashed #999;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secuencia-visual span {
+    display: inline-block;
+}
+
+@media (max-width: 900px) {
+    .page-content {
+        padding-right: 20px;
+    }
+    .accessibility-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: auto;
+        max-height: 260px;
+        border-radius: 0;
+    }
+    body {
+        padding-bottom: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .botones-materias,
+    .botones-niveles {
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* ================================================== */
+/* ESTILOS DE ACCESIBILIDAD - PERFILES Y MODOS */
+/* ================================================== */
+
+/* Alto Contraste */
+body.alto-contraste {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste .page-content {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste button {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #fff;
+}
+
+body.alto-contraste button:hover {
+    background-color: #ffff00;
+    color: #000;
+}
+
+body.alto-contraste button.activo {
+    background-color: #ffff00;
+    color: #000;
+    font-weight: bold;
+}
+
+body.alto-contraste .accessibility-panel,
+body.alto-contraste .alumno-panel,
+body.alto-contraste .estadisticas-panel,
+body.alto-contraste #contenedor-nivel {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Modo Concentración */
+body.modo-concentracion .intro-text {
+    display: none;
+}
+
+body.modo-concentracion .accessibility-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    max-height: 200px;
+    overflow-y: auto;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+/* Ayudas Visuales */
+body.ayudas-visibles button {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.35);
+}
+
+/* Botón Activo */
+.panel-buttons button.activo {
+    background-color: #2196F3;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #1976D2;
+}
+
+/* Anuncio de Accesibilidad */
+#anuncio-accesibilidad {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+

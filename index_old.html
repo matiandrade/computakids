@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamiento Computacional para Niños</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="accessibility-panel" aria-label="Panel de accesibilidad" role="complementary">
+        <h2>⚙️ Accesibilidad</h2>
+        <div class="panel-section panel-profiles">
+            <span class="panel-label">Perfiles rápidos</span>
+            <div class="panel-buttons">
+                <button type="button" data-perfil="tda">🧠 TDA</button>
+                <button type="button" data-perfil="autismo">🟡 Autismo</button>
+                <button type="button" data-perfil="down">🟦 Down</button>
+                <button type="button" data-perfil="retraso">🟢 Retraso madurativo</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">📏 Texto</span>
+            <div class="panel-buttons">
+                <button type="button" data-texto="pequeno">Pequeño</button>
+                <button type="button" data-texto="medio">Mediano</button>
+                <button type="button" data-texto="grande">Grande</button>
+                <button type="button" data-texto="extra">Extra grande</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">🎨 Contraste</span>
+            <div class="panel-buttons">
+                <button type="button" data-contraste="normal">Normal</button>
+                <button type="button" data-contraste="alto">Alto contraste</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">🔊 Sonidos</span>
+            <div class="panel-buttons">
+                <button type="button" data-sonidos="activar">Activar</button>
+                <button type="button" data-sonidos="silenciar">Silenciar</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">⏱️ Tiempo</span>
+            <div class="panel-buttons">
+                <button type="button" data-tiempo="normal">Normal</button>
+                <button type="button" data-tiempo="mas">Más tiempo</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">🧘 Modo</span>
+            <div class="panel-buttons">
+                <button type="button" data-modo="concentracion">Modo concentración</button>
+            </div>
+        </div>
+        <div class="panel-section">
+            <span class="panel-label">💡 Ayudas</span>
+            <div class="panel-buttons">
+                <button type="button" data-ayudas="mostrar">Mostrar/ocultar pistas</button>
+            </div>
+        </div>
+        <div id="anuncio-accesibilidad" aria-live="polite" aria-label="Anuncio de cambios de accesibilidad" class="sr-only"></div>
+    </div>
+
+    <div class="page-content">
+        <h1>Pensamiento Computacional para Niños</h1>
+        
+        <!-- Panel de Alumno -->
+        <div class="alumno-panel" role="region" aria-label="Gestión de perfil del alumno">
+            <div class="alumno-input-group">
+                <label for="input-alumno">👤 Nombre del alumno:</label>
+                <input 
+                    type="text" 
+                    id="input-alumno" 
+                    placeholder="Escribe tu nombre"
+                    maxlength="30"
+                    aria-label="Campo para ingresar nombre del alumno">
+                <button id="btn-guardar-alumno" aria-label="Guardar nombre del alumno">Guardar</button>
+            </div>
+            <div id="alumno-activo-display" class="alumno-display">
+                <span id="alumno-nombre">Alumno activo: -</span>
+            </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="estadisticas-panel" id="estadisticas-panel" style="display: none;" role="region" aria-label="Estadísticas de progreso">
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-label">Puntaje:</span>
+                    <span id="stat-puntaje" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Aciertos:</span>
+                    <span id="stat-aciertos" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Intentos:</span>
+                    <span id="stat-intentos" class="stat-value">0</span>
+                </div>
+            </div>
+            <button id="btn-reiniciar-progreso" aria-label="Reiniciar todo el progreso">🔄 Reiniciar progreso</button>
+        </div>
+
+        <p class="intro-text">Explora el pensamiento computacional a través de actividades prácticas en Biología, Matemática y Música. Selecciona una materia para comenzar.</p>
+        <div class="botones-materias" id="botones-materias">
+        <button role="button" aria-label="Seleccionar materia Biología" onclick="seleccionarMateria('biologia', this)">Biología</button>
+        <button role="button" aria-label="Seleccionar materia Matemática" onclick="seleccionarMateria('matematica', this)">Matemática</button>
+        <button role="button" aria-label="Seleccionar materia Música" onclick="seleccionarMateria('musica', this)">Música</button>
+    </div>
+    <div class="botones-niveles" id="botones-niveles" style="display: none;">
+        <button role="button" aria-label="Acceder al nivel Explorar" onclick="cargarNivel('explorar', this)">Explorar</button>
+        <button role="button" aria-label="Acceder al nivel Resolver" onclick="cargarNivel('resolver', this)">Resolver</button>
+        <button role="button" aria-label="Acceder al nivel Crear" onclick="cargarNivel('crear', this)">Crear</button>
+    </div>
+    <div id="contenedor-nivel" role="main" aria-label="Área principal donde se muestran los niveles pedagógicos">
+        <p>Selecciona una materia para ver los niveles disponibles.</p>
+    </div>
+    </div>
+
+    <script src="js/accesibilidad.js"></script>
+    <script src="js/explorar.js"></script>
+</body>
+</html>

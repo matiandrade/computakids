@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Tecnólogo Educativo — ComputaKids</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav class="navbar" role="banner">
+    <div class="nav-logo">
+      <a href="index.html" class="nav-back" aria-label="Volver al inicio">← Inicio</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-size:14px;font-weight:600;color:var(--color-text);">Panel Tecnólogo</span>
+      <span class="badge badge-purple">🛡️ Gestión</span>
+    </div>
+    <span class="nav-badge">EEP N° 80</span>
+  </nav>
+
+  <main class="panel-layout" role="main">
+
+    <div class="panel-hero">
+      <h1>Panel del Tecnólogo Educativo</h1>
+      <p>Gestión del modelo de consultoría, métricas de impacto pedagógico y seguimiento de la implementación — ciclo lectivo 2027.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid" aria-label="Indicadores del proyecto">
+      <div class="stat-card">
+        <div class="stat-label">Docentes capacitados</div>
+        <div class="stat-value" id="stat-docentes">6</div>
+        <div class="stat-sub">de 8 planificados</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Sesiones totales</div>
+        <div class="stat-value" id="stat-sesiones">0</div>
+        <div class="stat-sub">registradas en la plataforma</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Actividades accesibles</div>
+        <div class="stat-value">94%</div>
+        <div class="stat-sub">cumplen WCAG 2.1 AA</div>
+      </div>
+    </div>
+
+    <!-- Progreso por materia -->
+    <div class="section-title">Indicadores de progreso pedagógico</div>
+    <div class="info-card" style="max-width:560px;">
+      <div id="barras-materia">
+        <div class="bar-row">
+          <span class="bar-label">Biología</span>
+          <div class="bar-track"><div class="bar-fill bar-teal" id="bar-bio" style="width:0%"></div></div>
+          <span class="bar-pct" id="pct-bio">0%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Matemática</span>
+          <div class="bar-track"><div class="bar-fill bar-blue" id="bar-mat" style="width:0%"></div></div>
+          <span class="bar-pct" id="pct-mat">0%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Música</span>
+          <div class="bar-track"><div class="bar-fill bar-purple" id="bar-mus" style="width:0%"></div></div>
+          <span class="bar-pct" id="pct-mus">0%</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-hint);margin-top:14px;">
+        Calculado sobre el total de actividades completadas por los alumnos registrados.
+      </p>
+    </div>
+
+    <!-- Módulos de gestión -->
+    <div class="section-title">Módulos del modelo de consultoría</div>
+    <div class="cards-grid">
+
+      <div class="info-card">
+        <h3><span class="card-icon">🎓</span> Dimensión 1 — Capacitación docente</h3>
+        <div class="info-item">Talleres teórico-prácticos sobre PC y DUA</div>
+        <div class="info-item">Acompañamiento en el aula (observación)</div>
+        <div class="info-item">Seguimiento con rúbricas de evaluación</div>
+        <div class="info-item">8 encuentros de 2 horas (1er semestre 2027)</div>
+        <span class="card-badge badge badge-blue">6/8 completados</span>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">🎮</span> Dimensión 2 — Plataforma estudiantil</h3>
+        <div class="info-item">App web accesible: Explorar, Resolver, Crear</div>
+        <div class="info-item">3 materias: Biología, Matemática, Música</div>
+        <div class="info-item">Funciona offline (caché del navegador)</div>
+        <div class="info-item">Compatible con lectores de pantalla</div>
+        <span class="card-badge badge badge-green">Activo</span>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">📊</span> Dimensión 3 — Evaluación de impacto</h3>
+        <div class="info-item">Métricas de progreso por alumno y materia</div>
+        <div class="info-item">Encuestas de percepción docente (pre/post)</div>
+        <div class="info-item">Pruebas de desempeño estudiantil</div>
+        <div class="info-item">Informe técnico final replicable</div>
+        <span class="card-badge badge badge-gray">En proceso</span>
+      </div>
+
+      <div class="info-card">
+        <h3><span class="card-icon">⚙️</span> Viabilidad técnica</h3>
+        <div class="info-item">Tecnologías de código abierto (sin licencias)</div>
+        <div class="info-item">HTML/CSS/JS vanilla — sin dependencias</div>
+        <div class="info-item">Compatible con dispositivos básicos</div>
+        <div class="info-item">Funciona con baja conectividad</div>
+        <span class="card-badge badge badge-green">Diagnóstico OK</span>
+      </div>
+
+    </div>
+
+    <!-- Factibilidad -->
+    <div class="section-title">Análisis de factibilidad — EEP N° 80 El Calafate</div>
+    <table class="data-table" aria-label="Tabla de factibilidad del proyecto">
+      <thead>
+        <tr>
+          <th>Dimensión</th>
+          <th>Indicador</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Técnica</strong></td>
+          <td>Infraestructura tecnológica y conectividad disponible</td>
+          <td><span class="badge badge-green">Verificada</span></td>
+        </tr>
+        <tr>
+          <td><strong>Institucional</strong></td>
+          <td>Disposición de autoridades y docentes</td>
+          <td><span class="badge badge-green">Confirmada</span></td>
+        </tr>
+        <tr>
+          <td><strong>Económica</strong></td>
+          <td>Costo cero de licenciamiento (stack open source)</td>
+          <td><span class="badge badge-green">Sin costo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Académica</strong></td>
+          <td>Formación del equipo en tecnología educativa y desarrollo web</td>
+          <td><span class="badge badge-green">Acreditada</span></td>
+        </tr>
+        <tr>
+          <td><strong>Temporal</strong></td>
+          <td>Implementación completa en ciclo lectivo 2027</td>
+          <td><span class="badge badge-blue">En cronograma</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Marco referencia -->
+    <div class="section-title">Referencia bibliográfica del modelo</div>
+    <div class="info-card" style="max-width:600px;">
+      <h3><span class="card-icon">📚</span> Fundamentos del modelo de consultoría</h3>
+      <div class="info-item">Wing, J. M. (2006). Computational thinking. <em>CACM, 49(3)</em></div>
+      <div class="info-item">UNESCO (2021). Reimaginar juntos nuestros futuros.</div>
+      <div class="info-item">Ortuño Meseguer & Serrano (2024). Formación docente en PC. <em>RIED</em></div>
+    </div>
+
+    <!-- Exportar informe -->
+    <div class="section-title">Acciones</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <button onclick="exportarInforme()" style="padding:10px 20px;font-size:13px;border-radius:var(--radius-md);border:0.5px solid var(--color-gray-border);background:var(--color-bg);cursor:pointer;font-weight:500;">
+        📄 Exportar informe de progreso
+      </button>
+      <button onclick="resetearDatos()" style="padding:10px 20px;font-size:13px;border-radius:var(--radius-md);border:0.5px solid #ffbbbb;background:#fff5f5;color:#cc3333;cursor:pointer;">
+        🗑️ Reiniciar datos de prueba
+      </button>
+    </div>
+
+  </main>
+
+  <script src="js/tecnologo.js"></script>
+
+</body>
+</html>
